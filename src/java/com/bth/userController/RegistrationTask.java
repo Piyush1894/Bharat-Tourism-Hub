@@ -2,19 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+package com.bth.userController;
 
+import com.bth.userModel.UserDAO;
+import com.bth.userModel.UserDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
- * @author user
+ * @author admin
  */
-public class NewServlet extends HttpServlet {
+public class RegistrationTask extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,15 +34,32 @@ public class NewServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+             String name =request.getParameter("name");
+             String email=request.getParameter("email");
+             String password=request.getParameter("password");
+             String mobile=request.getParameter("mobile");
+             String image=request.getParameter("image");
+            System.out.println(name);
+             UserDAO udao=new UserDAO();
+             udao.setName(name);
+             udao.setEmail(email);
+             udao.setPassword(password);
+             udao.setMobile(mobile);
+             udao.setImage(image);
+             UserDTO udto=new UserDTO();
+             HttpSession session=request.getSession();
+//             udto.abhi();
+             boolean b=udto.insert(udao);
+             if(b){
+                  String s="Registration Sucsses";
+                   session.setAttribute("error", s);
+                 response.sendRedirect("UserView/UserLogin.jsp");
+             }
+             else{
+                   String s="Registration Faild";
+                   session.setAttribute("error", s);
+                   response.sendRedirect("UserView/UserRegistration.jsp");
+             }
         }
     }
 
