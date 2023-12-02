@@ -5,7 +5,7 @@
             <url>src/java/com/bth/userController/UserLogin.java</url>
             <bookmark id="1">
                 <name/>
-                <line>50</line>
+                <line>51</line>
                 <key/>
             </bookmark>
         </file>
@@ -14,9 +14,12 @@
         <group>
             <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/src/java/com/bth/userModel/UserDTO.java</file>
             <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/src/java/com/bth/userController/RegistrationTask.java</file>
-            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/web/UserView/UserRegistration.jsp</file>
-            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/web/UserView/UserLogin.jsp</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/src/java/com/bth/userModel/UserDAO.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/src/java/com/bth/userController/Update.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/web/UserView/UserIndex.jsp</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/web/UserView/index.html</file>
             <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/src/java/com/bth/userController/UserLogin.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Bharat-Tourism-Hub/web/UserView/profile.jsp</file>
         </group>
     </open-files>
 </project-private>

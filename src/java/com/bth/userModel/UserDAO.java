@@ -1,10 +1,10 @@
 package com.bth.userModel;
 public class UserDAO {
    private int id;
-   private String name,email,password,mobile,image,status;
+   private String name,email,password,mobile,image,status,address;
    public UserDAO(){}
 
-    public UserDAO(int id, String name, String email, String password, String mobile, String image, String status) {
+    public UserDAO(int id, String name, String email, String password, String mobile, String image, String status,String address) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -12,6 +12,15 @@ public class UserDAO {
         this.mobile = mobile;
         this.image = image;
         this.status = status;
+        this.address=address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getId() {

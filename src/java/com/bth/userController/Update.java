@@ -3,20 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package com.bth.userController;
-import com.bth.userModel.*;
+
+import com.bth.userModel.UserDAO;
+import com.bth.userModel.UserDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 /**
  *
  * @author admin
  */
-public class UserLogin extends HttpServlet {
+public class Update extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,27 +33,26 @@ public class UserLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-             String email=request.getParameter("email");
-           String pass=request.getParameter("pass");
-           UserDAO udao=new UserDAO();
-           udao.setEmail(email);
-           out.print(email);
-            System.out.println("kdgrfsmhgfcimsx,ldncjfv");
-           udao.setPassword(pass);
-           UserDTO udto=new UserDTO();
-           boolean b=udto.login(udao);
-          HttpSession session=request.getSession();
-           if(b){
-               session.setAttribute("udao",udao);
-                response.sendRedirect("UserView/UserIndex.jsp");
-           }
-           else{
-               String s="Login Faild";
-               session.setAttribute("error", s);
-               response.sendRedirect("UserView/UserLogin.jsp");
-           }
-           
-          
+           String id=request.getParameter("id");
+           String name=request.getParameter("newname");
+           String email=request.getParameter("newemail");
+           String mobile=request.getParameter("newmobile");
+           String image=request.getParameter("newimage");
+           String address=request.getParameter("address");
+            UserDAO udao=new UserDAO();
+            udao.setId(Integer.parseInt(id));
+            udao.setName(name);
+            udao.setEmail(email);
+            udao.setMobile(mobile);
+            udao.setImage(image);
+            udao.setAddress(address);
+            UserDTO udto=new UserDTO();
+            boolean b=udto.update(udao);
+            if(b){
+                out.print("abhishek");
+            }
+            
+            
         }
     }
 

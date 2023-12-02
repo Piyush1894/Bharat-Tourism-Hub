@@ -53,6 +53,7 @@ public class RegistrationTask extends HttpServlet {
              if(b){
                   String s="Registration Sucsses";
                    session.setAttribute("error", s);
+                   session.setAttribute("udao", udao);
                  response.sendRedirect("UserView/UserLogin.jsp");
              }
              else{
