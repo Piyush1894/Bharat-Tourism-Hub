@@ -1,20 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
-        <servlet-name>UserLogin</servlet-name>
-        <servlet-class>com.bth.userController.UserLogin</servlet-class>
+        <servlet-name>VendorLoginController</servlet-name>
+        <servlet-class>com.bth.controller.VendorLoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VendorRegistration</servlet-name>
+        <servlet-class>com.bth.controller.VendorRegistration</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BusAddController</servlet-name>
+        <servlet-class>com.bth.controller.BusAddController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BusOperations</servlet-name>
+        <servlet-class>com.bth.controller.BusOperations</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BusShowController</servlet-name>
+        <servlet-class>com.bth.controller.BusShowController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VendorLogout</servlet-name>
+        <servlet-class>com.bth.controller.VendorLogout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegistrationTask</servlet-name>
-        <servlet-class>com.bth.userController.RegistrationTask</servlet-class>
+        <servlet-class>com.bth.controller.RegistrationTask</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Update</servlet-name>
-        <servlet-class>com.bth.userController.Update</servlet-class>
+        <servlet-class>com.bth.controller.Update</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserLogin</servlet-name>
+        <servlet-class>com.bth.controller.UserLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowAllBus</servlet-name>
+        <servlet-class>com.bth.controller.ShowAllBus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookBus</servlet-name>
+        <servlet-class>com.bth.controller.BookBus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookingBusReport</servlet-name>
+        <servlet-class>com.bth.controller.BookingBusReport</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOutUser</servlet-name>
+        <servlet-class>com.bth.controller.LogOutUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BusApproval</servlet-name>
+        <servlet-class>com.bth.controller.BusApproval</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookingBusRequest</servlet-name>
+        <servlet-class>com.bth.controller.BookingBusRequest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchbus</servlet-name>
+        <servlet-class>com.bth.controller.searchbus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VendorApruve</servlet-name>
+        <servlet-class>com.bth.controller.VendorApruve</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserLogin</servlet-name>
-        <url-pattern>/UserLogin</url-pattern>
+        <servlet-name>VendorLoginController</servlet-name>
+        <url-pattern>/VendorLoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendorRegistration</servlet-name>
+        <url-pattern>/VendorRegistration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BusAddController</servlet-name>
+        <url-pattern>/BusAddController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BusOperations</servlet-name>
+        <url-pattern>/BusOperations</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BusShowController</servlet-name>
+        <url-pattern>/BusShowController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendorLogout</servlet-name>
+        <url-pattern>/VendorLogout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistrationTask</servlet-name>
@@ -23,5 +99,41 @@
     <servlet-mapping>
         <servlet-name>Update</servlet-name>
         <url-pattern>/Update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserLogin</servlet-name>
+        <url-pattern>/UserLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowAllBus</servlet-name>
+        <url-pattern>/ShowAllBus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookBus</servlet-name>
+        <url-pattern>/BookBus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookingBusReport</servlet-name>
+        <url-pattern>/BookingBusReport</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOutUser</servlet-name>
+        <url-pattern>/LogOutUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BusApproval</servlet-name>
+        <url-pattern>/BusApproval</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookingBusRequest</servlet-name>
+        <url-pattern>/BookingBusRequest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchbus</servlet-name>
+        <url-pattern>/searchbus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendorApruve</servlet-name>
+        <url-pattern>/VendorApruve</url-pattern>
     </servlet-mapping>
 </web-app>
